@@ -1,0 +1,19 @@
+{
+  "name": "clientserver",
+  "version": "0.0.1",
+  "description": "een react-express client server applicatie",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jef De Smedt <Jef.DeSmedt@betavzw.org>",
+  "license": "Beerware",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "create-react-app": "^2.1.5"
+  }
+}
