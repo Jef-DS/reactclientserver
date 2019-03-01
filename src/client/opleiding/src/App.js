@@ -6,6 +6,7 @@ import {
 } from 'reactstrap';
 import { NavLink as RRNavLink, HashRouter, Route } from 'react-router-dom';
 import CursusLijstContainer from './components/CursusLijst';
+import CursistLijstContainer from './components/CursistLijst';
 import './App.css';
 
 class App extends Component {
@@ -30,14 +31,14 @@ class App extends Component {
 
             <Navbar color="light" light expand="md">
               <NavbarToggler onClick={this.toggle} />
-              <NavbarBrand href='/'>Example</NavbarBrand>
+              <NavbarBrand href='/'>Cursussen en cursisten</NavbarBrand>
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
                   <NavItem>
                     <NavLink tag={RRNavLink} exact to="/" activeClassName="active">Home</NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink tag={RRNavLink} to="/cursisten" activeClassName="active">Andere</NavLink>
+                    <NavLink tag={RRNavLink} to="/cursussen" activeClassName="active">Andere</NavLink>
                   </NavItem>
                 </Nav>
               </Collapse>
@@ -45,7 +46,7 @@ class App extends Component {
 
           </Row>
             <Route exact path="/" render={() => <CursusLijstContainer />}></Route>
-            <Route path="/cursisten" component={CursusLijstContainer}></Route>
+            <Route path="/cursussen" component={CursistLijstContainer}></Route>
 
 
         </Container>
