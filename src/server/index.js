@@ -27,7 +27,7 @@ router.route('/cursussen').post((req, resp) =>{
 });
 router.route('/cursisten').post((req, resp) =>{
     let cursist = {id: cursisten.length, naam: req.body.naam};
-    cursussen.push(cursist);
+    cursisten.push(cursist);
     resp.json(cursist);
 });
 router.route('/cursussen/:cursusid').get((req, resp) => {
